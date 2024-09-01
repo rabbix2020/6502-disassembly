@@ -19,7 +19,6 @@ while index < len(data):
 	if current_byte in instruction_size.keys():
 	   current_opcode_size = instruction_size[current_byte]
 	   current_opcode = [current_byte] + list(map(dh, data[index+1:index+instruction_size[current_byte]]))
-	   current_opcode_size = instruction_size[current_byte]
 	   if current_opcode[0] in instruction_opcode:
 	     match current_opcode_size:
 	          case 1:	print(instruction_opcode[current_opcode[0]], end='')
